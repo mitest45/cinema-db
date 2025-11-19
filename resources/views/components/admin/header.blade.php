@@ -108,7 +108,7 @@
                   <a href="#" class="list-group-item">
                     <div class="row g-0 align-items-center">
                       <div class="col-2">
-                        <img src="img/avatars/avatar-5.jpg" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
+                        <img src="{{asset('admin/img/avatars/avatar-5.jpg')}}" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
                       </div>
                       <div class="col-10 ps-2">
                         <div class="text-dark">Vanessa Tucker</div>
@@ -120,7 +120,7 @@
                   <a href="#" class="list-group-item">
                     <div class="row g-0 align-items-center">
                       <div class="col-2">
-                        <img src="img/avatars/avatar-2.jpg" class="avatar img-fluid rounded-circle" alt="William Harris">
+                        <img src="{{asset('admin/img/avatars/avatar-2.jpg')}}" class="avatar img-fluid rounded-circle" alt="William Harris">
                       </div>
                       <div class="col-10 ps-2">
                         <div class="text-dark">William Harris</div>
@@ -132,7 +132,7 @@
                   <a href="#" class="list-group-item">
                     <div class="row g-0 align-items-center">
                       <div class="col-2">
-                        <img src="img/avatars/avatar-4.jpg" class="avatar img-fluid rounded-circle" alt="Christina Mason">
+                        <img src="{{asset('admin/img/avatars/avatar-4.jpg')}}" class="avatar img-fluid rounded-circle" alt="Christina Mason">
                       </div>
                       <div class="col-10 ps-2">
                         <div class="text-dark">Christina Mason</div>
@@ -144,7 +144,7 @@
                   <a href="#" class="list-group-item">
                     <div class="row g-0 align-items-center">
                       <div class="col-2">
-                        <img src="img/avatars/avatar-3.jpg" class="avatar img-fluid rounded-circle" alt="Sharon Lessman">
+                        <img src="{{asset('admin/img/avatars/avatar-3.jpg')}}" class="avatar img-fluid rounded-circle" alt="Sharon Lessman">
                       </div>
                       <div class="col-10 ps-2">
                         <div class="text-dark">Sharon Lessman</div>
@@ -164,7 +164,7 @@
                 <i class="align-middle" data-feather="settings"></i>
               </a>
               <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" />
+                <img src="{{asset('admin/img/avatars/avatar.jpg');}}" class="avatar img-fluid rounded me-1" alt="Charles Hall" />
                 <span class="text-dark">Charles Hall</span>
               </a>
               <div class="dropdown-menu dropdown-menu-end">
