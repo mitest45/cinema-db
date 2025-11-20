@@ -31,6 +31,8 @@
 	</div>
 
 	<script src="{{asset('admin/js/app.js')}}"></script>
+	<script src="{{asset('admin/libs/summernote/summernote-bs5.min.js')}}"></script>
+	<script src="{{asset('admin/js/custom.js')}}"></script>
 
 </body>
 
