@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Schema;
 
 class MovieController extends AdminController
 {
-    //__construct
+    //__construct sdfgsdfg
     public function __construct(){
         parent::__construct();
 
