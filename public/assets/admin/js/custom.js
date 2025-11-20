@@ -9,11 +9,22 @@ function initialize_summernote() {
         height: 200,
         toolbar: [
             ['style', ['bold', 'italic', 'underline', 'clear']],
-            ['fontsize', ['fontsize']],
-            ['color', ['color']],
             ['para', ['ul', 'ol', 'paragraph']],
-            ['insert', ['link', 'picture', 'video']],
-            ['view', ['fullscreen', 'codeview']]
-        ]
+            ['misc', ['fullscreen', 'codeview']]
+        ],
+        disableDragAndDrop: true,
+        popover: false,
+        dialogsInBody: false,
+        dialogsFade: false,
+
+        callbacks: {
+            onInit: function() {
+                // Remove insert buttons if they show up
+                $('.note-insert').remove();
+                $('.note-view .note-link').remove();
+                $('.note-view .note-picture').remove();
+                $('.note-view .note-video').remove();
+            }
+        }
     });
 }
