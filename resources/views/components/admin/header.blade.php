@@ -13,11 +13,21 @@
 	<link rel="shortcut icon" href="{{asset('admin/img/icons/icon-48x48.png')}}" />
 
 	<!-- <link rel="canonical" href="https://demo-basic.adminkit.io/pages-blank.html" /> -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 	<title>Cinema DB</title>
 
 	<link href="{{asset('admin/css/app.css') }}" rel="stylesheet">
+	<link href="{{asset('admin/css/custom.css') }}" rel="stylesheet">
+	<link href="{{asset('admin/libs/font-awesome/font-awesome.css') }}" rel="stylesheet">
+	<link href="{{asset('admin/libs/summernote/summernote-bs5.min.css') }}" rel="stylesheet">
+
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        // For global user
+        var url = "{{url('/')}}";
+        var csrf_token = "{{csrf_token()}}";
+    </script>
 </head>
 <body>
   <div class="wrapper">
