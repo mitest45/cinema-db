@@ -5,20 +5,21 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
 
-class MakeAdminController extends Command
+class MakeFrotendController extends Command
 {
     /**
      * The name and signature of the console command.
+     *
      * @var string
      */
-    protected $signature = 'make:AdminController {name}';
+    protected $signature = 'make:FrontendController {name}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Create a controller inside Admin folder extending AdminController';
+    protected $description = 'Create a controller inside Frontend folder extending FrontendController';
 
     /**
      * Execute the console command.
@@ -26,16 +27,16 @@ class MakeAdminController extends Command
     public function handle()
     {
         $className = $name = $this->argument('name');
-        $namespace = 'App\\Http\\Controllers\\Admin';
+        $namespace = 'App\\Http\\Controllers\\Frontend';
 
-        $directory = app_path('Http/Controllers/Admin');
+        $directory = app_path('Http/Controllers/Frontend');
         $filePath = $directory . '/' . $className . '.php';
 
         if (!File::exists($directory)) {
             File::makeDirectory($directory, 0777, true, true);
         }
 
-        $stubPath = base_path('stubs/admin.controller.stub');
+        $stubPath = base_path('stubs/frontend.controller.stub');
         $stub = File::get($stubPath);
 
         $content = str_replace(
@@ -46,7 +47,7 @@ class MakeAdminController extends Command
 
         File::put($filePath, $content);
 
-        $this->components->info("Admin Controller created successfully.");
+        $this->components->info("Frontend Controller created successfully.");
         $this->components->bulletList([
             "Path: " . str_replace(base_path() . '/', '', $filePath)
         ]);

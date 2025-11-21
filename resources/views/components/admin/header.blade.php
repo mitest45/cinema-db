@@ -12,15 +12,18 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="shortcut icon" href="{{asset('admin/img/icons/icon-48x48.png')}}" />
 
-	<!-- <link rel="canonical" href="https://demo-basic.adminkit.io/pages-blank.html" /> -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 	<title>Cinema DB</title>
 
+  <!-- Bootstrap 5 CSS (AdminKit style similar) -->
+  <link href="{{asset('libs/bootstrap-5.3.2/bootstrap.css') }}" rel="stylesheet">
 	<link href="{{asset('admin/css/app.css') }}" rel="stylesheet">
 	<link href="{{asset('admin/css/custom.css') }}" rel="stylesheet">
-	<link href="{{asset('admin/libs/font-awesome/font-awesome.css') }}" rel="stylesheet">
-	<link href="{{asset('admin/libs/summernote/summernote-bs5.min.css') }}" rel="stylesheet">
+	<link href="{{asset('libs/font-awesome/font-awesome.css') }}" rel="stylesheet">
+	<link href="{{asset('libs/summernote/summernote-bs5.min.css') }}" rel="stylesheet">
+	<!-- <link href="{{asset('libs/jquery-confirm/jquery-confirm.min.js') }}" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.css">
 
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <script>
@@ -188,7 +191,7 @@
                 <a class="dropdown-item" href="#">
                   <i class="align-middle me-1" data-feather="help-circle"></i> Help Center </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Log out</a>
+                <a class="dropdown-item logout-session" href="{{route('admin.logout')}}">Log out</a>
               </div>
             </li>
           </ul>
@@ -196,3 +199,32 @@
       </nav>
       
         <main class="content">
+          @if (session('success'))
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <strong>{{_l('success')}}!</strong> {{ session('success') }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+          @endif
+
+          @if (session('error'))
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <strong>{{_l('error')}}!</strong> {{ session('error') }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+          @endif
+
+          @if (session('warning'))
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <strong>{{_l('warning')}}!</strong> {{ session('warning') }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+          @endif
+
+          @if (session('info'))
+              <div class="alert alert-info alert-dismissible fade show" role="alert">
+                  <strong>{{_l('info')}} !</strong> {{ session('info') }}
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+          @endif
+          
+

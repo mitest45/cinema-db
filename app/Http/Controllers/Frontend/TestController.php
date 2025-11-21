@@ -1,10 +1,10 @@
 <?php
 
-namespace {{ namespace }};
+namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
 
-class {{ class }} extends AdminController
+class TestController extends FrontendController
 {
     public function __construct()
     {
