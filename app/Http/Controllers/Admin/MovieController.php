@@ -358,9 +358,13 @@ class MovieController extends AdminController
             if (!$movie) {
                 return back()
                     ->withInput()
-                    ->withErrors(['error' => _l('movie_could_not_be_saved_please_try_again')]);
+                    ->withErrors(['error' => _l('record_could_not_be_saved_please_try_again')]);
             }
-            return back()->with('success', _l('movie_saved_successfully'));
+
+            return redirect()
+            ->route('admin.movie.index')
+            ->with('success', _l('record_saved_successfully'));
+
         } catch (\Exception $e) {
             return back()
                 ->withInput()

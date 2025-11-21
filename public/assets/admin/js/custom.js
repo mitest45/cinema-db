@@ -2,6 +2,11 @@ $(document).ready(function(){
     // initilize summernite
     initialize_summernote();
 
+    // after 3 second hide he alert
+    setTimeout(() => {
+        $('.alert').hide(300).remove();
+    }, 3000);
+
     $(document).on("click", ".delete-record", function (e) {
         e.preventDefault();
 
