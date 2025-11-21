@@ -12,16 +12,27 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <div class="card-header">
-                    <h5 class="card-title mb-0">Empty card</h5>
-                </div>
                 <div class="card-body">
-
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>#</th>
+                                <th>{{_l('poster')}}</th>
+                                <th>{{_l('title')}}</th>
+                                <th>{{_l('release_date')}}</th>
+                                <th>{{_l('language')}}</th>
+                                <th>{{_l('status')}}</th>
+                                <th>{{_l('action')}}</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-tbody">
+                            @include(VIEW_PATH.'movie.index-table-tbody')
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
 
 </div>
-
 <x-admin.footer />

@@ -12,15 +12,18 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="shortcut icon" href="{{asset('admin/img/icons/icon-48x48.png')}}" />
 
-	<!-- <link rel="canonical" href="https://demo-basic.adminkit.io/pages-blank.html" /> -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 	<title>Cinema DB</title>
 
+  <!-- Bootstrap 5 CSS (AdminKit style similar) -->
+  <link href="{{asset('libs/bootstrap-5.3.2/bootstrap.css') }}" rel="stylesheet">
 	<link href="{{asset('admin/css/app.css') }}" rel="stylesheet">
 	<link href="{{asset('admin/css/custom.css') }}" rel="stylesheet">
-	<link href="{{asset('admin/libs/font-awesome/font-awesome.css') }}" rel="stylesheet">
-	<link href="{{asset('admin/libs/summernote/summernote-bs5.min.css') }}" rel="stylesheet">
+	<link href="{{asset('libs/font-awesome/font-awesome.css') }}" rel="stylesheet">
+	<link href="{{asset('libs/summernote/summernote-bs5.min.css') }}" rel="stylesheet">
+	<!-- <link href="{{asset('libs/jquery-confirm/jquery-confirm.min.js') }}" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.css">
 
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <script>

@@ -31,7 +31,11 @@
 	</div>
 
 	<script src="{{asset('admin/js/app.js')}}"></script>
-	<script src="{{asset('admin/libs/summernote/summernote-bs5.min.js')}}"></script>
+	<!-- <script src="{{asset('libs/bootstrap-5.3.2/bootstrap.js') }}"></script> -->
+	<script src="{{asset('libs/summernote/summernote-bs5.min.js')}}"></script>
+	<!-- <script src="{{asset('libs/jquery-confirm/jquery-confirm.min.js') }}"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.4/jquery-confirm.min.js"></script>
+
 	<script src="{{asset('admin/js/custom.js')}}"></script>
 
 </body>

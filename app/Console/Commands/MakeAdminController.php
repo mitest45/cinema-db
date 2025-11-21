@@ -9,7 +9,6 @@ class MakeAdminController extends Command
 {
     /**
      * The name and signature of the console command.
-     *
      * @var string
      */
     protected $signature = 'make:AdminController {name}';
@@ -46,7 +45,7 @@ class MakeAdminController extends Command
         );
 
         File::put($filePath, $content);
-        
+
         $this->components->info("Admin Controller created successfully.");
         $this->components->bulletList([
             "Path: " . str_replace(base_path() . '/', '', $filePath)
