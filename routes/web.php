@@ -2,9 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
-//Controllers
+//Admin Controllers
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MovieController;
+use App\Http\Controllers\Admin\AdminauthController;
 
 
 Route::get('/', function () {
@@ -14,6 +15,12 @@ Route::get('/', function () {
 
 // Admin Routes
 Route::prefix('admin')->name('admin.')->group(function(){
+    //Auth
+    Route::get('login', [AdminauthController::class, 'login'])->name('login');
+    Route::get('logout', [AdminauthController::class, 'logout'])->name('logout');
+    Route::post('login-check', [AdminauthController::class, 'login_check'])->name('login_check');
+
+    //Dashboard
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     // Movie

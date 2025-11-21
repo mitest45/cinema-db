@@ -52,6 +52,37 @@ $(document).ready(function(){
         });
     });
 
+    $(document).on('click', '.logout-session', function (e) {
+        e.preventDefault();
+
+        let logoutUrl = $(this).attr('href');
+
+        $.confirm({
+            title: 'Logout Confirmation',
+            content: 'Do you really want to logout?',
+            type: 'red',
+            theme: 'modern',
+            buttons: {
+                yes: {
+                    text: 'Yes, Logout',
+                    btnClass: 'btn-red',
+                    action: function () {
+                        window.location.href = logoutUrl;
+                    }
+                },
+                no: {
+                    text: 'Cancel',
+                    btnClass: 'btn-secondary',
+                    action: function () {
+                        // do nothing
+                    }
+                }
+            }
+        });
+    });
+
+
+
 });
 
 function initialize_summernote() {
